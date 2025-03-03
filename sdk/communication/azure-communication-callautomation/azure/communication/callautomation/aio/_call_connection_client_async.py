@@ -1156,7 +1156,7 @@ class CallConnectionClient:  # pylint: disable=too-many-public-methods
             operation_callback_uri=operation_callback_url,
             operation_context=operation_context
             )
-        self._call_media_client.stop_media_streaming(
+        await self._call_media_client.stop_media_streaming(
             self._call_connection_id,
             stop_media_streaming_request,
             **kwargs
